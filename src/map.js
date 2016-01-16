@@ -1,6 +1,6 @@
 var countriesJson;
 
-countriesJson = $.getJSON('../src/data/ne-v2.0.0-countries-geojson/ne-countries-50m.json', function(json) {
+countriesJson = $.getJSON('http://www.nearimprov.com/world-flags-in-context/src/data/ne-v2.0.0-countries-geojson/ne-countries-50m.json', function(json) {
   var get_icon, map, onEachFeature;
   map = L.map('map').setView([51.505, -0.09], 3);
   get_icon = function(iso) {
@@ -8,7 +8,7 @@ countriesJson = $.getJSON('../src/data/ne-v2.0.0-countries-geojson/ne-countries-
     if (iso !== 'nz') {
       url = "http://www.geonames.org/flags/x/" + iso + ".gif";
     } else {
-      url = "./src/lockwood.png";
+      url = "http://www.nearimprov.com/world-flags-in-context/src/lockwood.png";
     }
     flag_icon = L.icon({
       iconUrl: url,

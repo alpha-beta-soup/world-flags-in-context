@@ -1,4 +1,4 @@
-countriesJson = $.getJSON('../src/data/ne-v2.0.0-countries-geojson/ne-countries-50m.json', (json) ->
+countriesJson = $.getJSON('http://www.nearimprov.com/world-flags-in-context/src/data/ne-v2.0.0-countries-geojson/ne-countries-50m.json', (json) ->
 
   map = L.map('map').setView([51.505, -0.09], 3);
 
@@ -14,7 +14,7 @@ countriesJson = $.getJSON('../src/data/ne-v2.0.0-countries-geojson/ne-countries-
     if iso != 'nz'
       url = "http://www.geonames.org/flags/x/#{iso}.gif"
     else
-      url = "./src/lockwood.png"
+      url = "http://www.nearimprov.com/world-flags-in-context/src/lockwood.png"
     flag_icon = L.icon(
       iconUrl: url
       iconSize: [35, 20]

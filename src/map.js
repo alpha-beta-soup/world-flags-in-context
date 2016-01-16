@@ -1,6 +1,6 @@
 var countriesJson;
 
-countriesJson = $.getJSON('../data/ne-v2.0.0-countries-geojson/ne-countries-50m.json', function(json) {
+countriesJson = $.getJSON('https://github.com/alpha-beta-soup/world-flags-in-context/blob/master/data/ne-v2.0.0-countries-geojson/ne-countries-50m.json', function(json) {
   var get_icon, map, onEachFeature;
   map = L.map('map').setView([51.505, -0.09], 3);
   get_icon = function(iso) {

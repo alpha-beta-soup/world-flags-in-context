@@ -1,4 +1,4 @@
-countriesJson = $.getJSON('../data/ne-v2.0.0-countries-geojson/ne-countries-50m.json', (json) ->
+countriesJson = $.getJSON('https://github.com/alpha-beta-soup/world-flags-in-context/blob/master/data/ne-v2.0.0-countries-geojson/ne-countries-50m.json', (json) ->
 
   map = L.map('map').setView([51.505, -0.09], 3);
 
